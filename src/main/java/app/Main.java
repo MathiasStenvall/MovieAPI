@@ -8,8 +8,9 @@ public class Main {
     public static void main(String[] args) {
 
         APIReader apiReader = new APIReader();
-        MovieDTO overviewDTO = apiReader.getWithJsonGeneric("tt0164756", MovieDTO.class);
-        System.out.println(overviewDTO);
+        MovieDTO mifune = apiReader.getWithJsonGeneric("tt0164756", MovieDTO.class);
+        System.out.println(mifune);
+        System.out.println(mifune.getInfo().get(0).getReleaseYear());
 
     }
 
